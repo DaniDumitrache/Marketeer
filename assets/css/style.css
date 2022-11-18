@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: #000;
+  list-style: none;
+  font-family: "Courier New", Courier, monospace;
+}
+/*   box-shadow: 0px 4px 25px rgb(14 36 49 / 15%); */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 80px;
+  box-shadow: 0px 4px 25px rgb(14 36 49 / 15%);
+}
+
+.navbar ul li {
+  float: left;
+  padding: 0 20px;
+}
+
+.navbar ul li.active a {
+  color: #0c530c;
+}
+
+.navbar ul li a:hover::after {
+  content: "";
+  display: block;
+  background-color: #0c530c;
+  height: 2px;
+}
+
+.navbar ul li.active a::after {
+  content: "";
+  display: block;
+  background-color: #0c530c;
+  height: 2px;
+}
+
+.navbar .logo {
+  font-size: 20px;
+  font-family: "Poppins";
+  width: 10%;
+}
+
+.PrpNav {
+  width: 100px;
+}
+
+.PrpNav #Close {
+  display: none;
+}
+
+.PrpNav #Open {
+  display: none;
+}
+
+#Open,
+#Close {
+  font-size: 20px;
+}
+
+.home-intro {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../img/everyday_eco_rain_site_hero_1280x1280.webp");
+  height: 87vh;
+  align-items: center;
+  display: flex;
+  justify-content: right;
+  padding: 0 80px;
+}
+
+.home-intro .container {
+  gap: 20px 0px;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  justify-content: right;
+}
+
+.home-intro .container h6,
+h5,
+h4,
+h3,
+h2,
+h1 {
+  color: #fff;
+}
+
+.home-intro .container h1 {
+  font-size: 80px;
+  font-weight: 800;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.home-intro .container h4 {
+  font-size: 25px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.btn-primary {
+  text-align: center;
+  padding: 15px 20px;
+  color: #000;
+  box-shadow: 0px 4px 25px rgb(14 36 49 / 15%);
+  border: none;
+  font-size: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 1s;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 600;
+  width: 180px;
+}
+
+.products {
+  height: 50vh;
+  padding: 10px 20px;
+}
+
+.products .container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.products .container .box {
+  border-radius: 5px;
+  width: 250px;
+  height: 300px;
+  background-color: red;
+}
+
+.products .container .box .image img {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.products .container .box .info {
+  padding: 10px;
+}
+
+.products .container .box .info h3 {
+  text-align: center;
+  font-size: 14px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.btn-primary:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+@media (max-width: 1000px) {
+  .PrpNav #Open {
+    display: block;
+  }
+  .navbar .PrpNav {
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+  }
+  .MenuActive .PrpNav {
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+  }
+  .navbar ul {
+    display: none;
+  }
+
+  .navbar .PrpNav #Open {
+    display: block;
+  }
+
+  .MenuActive .PrpNav #Close {
+    margin-right: 155px;
+  }
+
+  .MenuActive .PrpNav {
+    font-size: 20px;
+    align-items: center;
+    padding: 20px 80px;
+  }
+
+  .MenuActive {
+    padding: 0px;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    display: block;
+  }
+  .MenuActive ul li {
+    margin-bottom: 10px;
+  }
+
+  .MenuActive ul li a {
+    font-size: 20px;
+  }
+
+  .MenuActive ul {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90%;
+  }
+
+  .MenuActive .PrpNav {
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+  }
+
+  .MenuActive .PrpNav #Close {
+    display: block;
+  }
+
+  .MenuActive .PrpNav #Open {
+    display: none;
+  }
+}
